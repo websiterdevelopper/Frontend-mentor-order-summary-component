@@ -1,0 +1,124 @@
+/* Variables */
+:root {
+  --body-bg: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --price-bg: hsl(225, 100%, 98%);
+  --hover: hsl(224, 23%, 55%);
+  --title-clr: hsl(223, 47%, 23%);
+}
+
+/* General */
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--body-bg);
+  font-family: "Red Hat Display", Arial, Helvetica, sans-serif;
+  background-image: url("images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+}
+
+a {
+  color: unset;
+  transition: 0.3s;
+  color: var(--bright-blue);
+  font-weight: bold;
+}
+
+/* Main */
+.card {
+  min-width: 300px;
+  width: 400px;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.card > img {
+  display: block;
+  width: 100%;
+}
+
+.card main {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card main h2 {
+  color: var(--title-clr);
+  text-transform: capitalize;
+}
+
+.card main p {
+  color: var(--hover);
+}
+
+.card main .payment-plan {
+  background-color: var(--price-bg);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card main .payment-plan img {
+  margin-right: 10px;
+}
+
+.card main .payment-plan a:hover {
+  color: var(--hover);
+  text-decoration: none;
+}
+.card main .payment-plan .price {
+  display: flex;
+  align-items: center;
+}
+
+.card main .payment-plan span:first-child {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card main .payment-plan span:last-child {
+  color: var(--hover);
+}
+
+.card footer {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.card footer button {
+  outline: none;
+  border: none;
+  display: block;
+  width: calc(100% - 3rem);
+  padding: 1rem;
+  background-color: var(--bright-blue);
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  margin: 0 auto 1rem;
+  box-shadow: 0px 8px 20px 2px hsl(245deg 75% 52% / 25%);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card footer button:hover {
+  background-color: var(--hover);
+}
+
+.card footer p {
+  font-weight: bold;
+  color: var(--hover);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.card footer p:hover {
+  color: var(--title-clr);
+}
